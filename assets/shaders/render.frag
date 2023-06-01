@@ -9,7 +9,7 @@ layout(location=0) out vec4 fragColor;
 
 vec3 get(int offsetX, int offsetY) {
 	return texture2D(u_texture,
-			(v_texCoords + vec2(offsetX, offsetY) / frameDimensions));
+			(v_texCoords + vec2(offsetX, offsetY) / frameDimensions)).rgb;
 }
 
 void main() {
@@ -20,5 +20,5 @@ void main() {
 	float g = c.b * 2;
 	float b = c.b;
 
-	fragColor = clamp(vec4(r, g, b, 1f), 0f, 1f);
+	fragColor = clamp(vec4(0f, g, b, 1f), 0f, 1f);
 }

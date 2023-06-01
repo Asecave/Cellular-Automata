@@ -48,13 +48,14 @@ public class Main extends ApplicationAdapter {
 			}
 		}
 		pix.setColor(Color.BLUE);
-		for (int x = 0; x < width; x++) {
-			for (int y = 0; y < height; y++) {
-				if (Math.random() < 0.00001f) {
-					pix.drawCircle(x, y, (int) (Math.random() * 200));
-				}
-			}
-		}
+//		for (int x = 0; x < width; x++) {
+//			for (int y = 0; y < height; y++) {
+//				if (Math.random() < 0.00001f) {
+//					pix.drawCircle(x, y, (int) (Math.random() * 200));
+//				}
+//			}
+//		}
+		pix.fillCircle(width / 2, height / 2, 10);
 		
 		fbo1.begin();
 		batch.begin();

@@ -8,13 +8,13 @@ uniform vec2 frameDimensions;
 layout(location=0) out vec4 fragColor;
 
 const float diffuseA = 1f;
-const float diffuseB = 0.3f;
-const float feedRate = 0.029f;
-const float killRate = 0.057f;
+const float diffuseB = 0.345f;
+const float feedRate = 0.0402f;
+const float killRate = 0.062f;
 
 vec3 get(int offsetX, int offsetY) {
 	return texture2D(u_texture,
-			(v_texCoords + vec2(offsetX, offsetY) / frameDimensions));
+			(v_texCoords + vec2(offsetX, offsetY) / frameDimensions)).rgb;
 }
 
 vec3 laplace() {
